@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ZoneFile Graph</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://d3js.org/topojson.v1.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/js/force.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/js/heatmap.js')}}"></script>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='styles/force.css') }}" />
+</head>
+
+<body>
+    <input name="Label" type="text" maxlength="512" id="label" />
+    <input id="showGraph" type="button" value="ShowGraph" onclick="d3jsGrapthbyLabel('label')" />
+    <div id="statsBarChart"></div>
+    <div id="bigramsScore"></div>
+    <div id="graphChart"></div>
+    <div id="map"></div>
+    <script type="text/javascript">
+    worldMap()
+    </script>
+</body>
+
+</html>
